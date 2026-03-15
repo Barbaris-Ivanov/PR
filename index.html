@@ -107,7 +107,7 @@ activeTab.classList.add('active')
 }
 
 document.addEventListener("DOMContentLoaded",function(){
-showTab("route1")
+showTab("home")
 })
 
 </script>
@@ -121,7 +121,7 @@ showTab("route1")
 </header>
 
 <div class="tabs">
-
+<div class="tab" data-tab="home" onclick="showTab('home')">Главная</div>
 <div class="tab" data-tab="route1" onclick="showTab('route1')">Маршрут 1</div>
 <div class="tab" data-tab="route2" onclick="showTab('route2')">Маршрут 2</div>
 <div class="tab" data-tab="route3" onclick="showTab('route3')">Маршрут 3</div>
@@ -131,24 +131,78 @@ showTab("route1")
 
 </div>
 
+<!-- Главная страница -->
+<div id="home" class="content">
+
+    <h2>Добро пожаловать на сайт туристических маршрутов Одинцовского округа</h2>
+    
+    <img src="https://welcome.mosreg.ru/cache/thumbs/thumb_1280__1528454151.jpg">
+    
+    <p>
+    Одинцовский городской округ — один из самых красивых и исторически богатых районов Московской области.
+    Он расположен всего в нескольких километрах от Москвы и сочетает в себе богатое культурное наследие,
+    живописную природу и множество возможностей для туризма и отдыха.
+    </p>
+    
+    <p>
+    На этом сайте вы найдете готовые туристические маршруты по самым интересным местам округа:
+    историческим усадьбам, военным мемориалам, культурным объектам, паркам и природным территориям.
+    </p>
+    
+    <h3>Природа и отдых</h3>
+    
+    <img src="https://odin.ru/img/gallery/2024/06/2024-06-25_12-20-20-tn2.jpg">
+    
+    <p>
+    Большая часть округа покрыта лесами и парками. Здесь расположены популярные места для прогулок,
+    велосипедных поездок и спорта — парк «Лазутинка», парк Малевича, парк «Раздолье» и многие другие.
+    </p>
+    
+    <h3>Историческое наследие</h3>
+    
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Chateau_de_Viaziomy_-_2017_%281%29.jpg/1200px-Chateau_de_Viaziomy_-_2017_%281%29.jpg">
+    
+    <p>
+    В округе находятся знаменитые усадьбы и памятники архитектуры: Захарово, Большие Вязёмы,
+    замок Мейендорф, а также древние монастыри и музеи. Многие из этих мест связаны с
+    известными историческими личностями и событиями.
+    </p>
+    
+    <h3>Что вы найдете на сайте</h3>
+    
+    <ul>
+    <li>4 туристических маршрута по округу</li>
+    <li>лучшие гастрономические места</li>
+    <li>активный туризм и спортивные локации</li>
+    <li>описания достопримечательностей</li>
+    <li>идеи для путешествий на выходные</li>
+    </ul>
+    
+    <p>
+    Выберите интересующий раздел в меню и отправляйтесь в путешествие по Одинцовскому городскому округу!
+    </p>
+    
+</div>
+
+
 <!-- Маршрут 1 -->
-<div id="route1" class="content">
+<div id="route1" class="content" >
     <h2>Маршрут 1 — Военно-исторический</h2>
     <p>Этот маршрут познакомит вас с важнейшими памятными и культурными объектами, связанными с Великой Отечественной войной.</p>
     
-    <div class="route-block">
+    <div class="place">
     <h3>Главный храм Вооружённых сил РФ</h3>
     <img src="https://i.ytimg.com/vi/uGuwoyhByo4/maxresdefault.jpg">
     <p>Построен к 75-летию Победы. Высота — 95 метров. Стены украшены барельефами военных сцен, а внутреннее убранство создаёт торжественную атмосферу памяти и уважения.</p>
     </div>
     
-    <div class="route-block">
+    <div class="place">
     <h3>Музей «Дорога памяти»</h3>
     <img src="https://i.ytimg.com/vi/CDblEJ-Q6Lc/maxresdefault.jpg">
     <p>1418 шагов — по числу дней войны. 35 залов и миллионы фотографий участников войны. Экспозиция дополнена мультимедийными материалами и архивными документами.</p>
     </div>
     
-    <div class="route-block">
+    <div class="place">
     <h3>«Партизанская деревня»</h3>
     <img src="https://parkpatriot.ru/upload/medialibrary/949/yewebh1qq2q6owbvsxqokpq3sp1t0n4i/content_img.png">
     <p>Реконструкция быта партизанского отряда: землянки, штаб, мастерские. Посетители могут увидеть условия жизни бойцов и образцы вооружения того времени.</p>
@@ -160,25 +214,25 @@ showTab("route1")
     <h2>Маршрут 2 — По местам боевой славы</h2>
     <p>Памятные места, рассказывающие о героизме и трудностях военных лет в регионе.</p>
     
-    <div class="route-block">
+    <div class="place">
     <h3>Мемориал «Дунинский рубеж»</h3>
     <img src="https://avatars.dzeninfra.ru/get-zen_doc/8288376/pub_644fee551bfaef108fdb8999_6450e2c228852a1ba56b8d15/scale_1200">
     <p>Музей под открытым небом, посвящённый обороне Москвы 1941 года. Здесь можно пройти по настоящим окопам и увидеть военную технику.</p>
     </div>
     
-    <div class="route-block">
+    <div class="place">
     <h3>Воинский мемориал в Одинцово</h3>
     <img src="https://avatars.mds.yandex.net/get-altay/2447509/2a000001729c7abf2a6f83797234a44ca162/XXL_height">
     <p>Место захоронения бойцов 5-й Армии, умерших в полевом госпитале. Мемориал является символом уважения к подвигу солдат.</p>
     </div>
     
-    <div class="route-block">
+    <div class="place">
     <h3>Братская могила (п. Часцы)</h3>
     <img src="https://oinfo.ru/img/gallery/memorial/pos.jpg">
     <p>Захоронение 96 воинов Великой Отечественной войны. Тихое и трогательное место памяти.</p>
     </div>
     
-    <div class="route-block">
+    <div class="place">
     <h3>Памятник маршалу Г.К. Жукову</h3>
     <img src="https://xn--80ahcnlhsxj.xn--p1ai/media/images/8Y3kBQ9tVgq0I2xeVys_ih_jSN6ZHHdJvD_WYIRBD70/rs:fit:828:466/aHR0cHM6Ly94bi0tODBhaGNubGhzeGoueG4tLXAxYWkvbWVkaWEvbXVsdGltZWRpYS9tZWRpYWZpbGUvZmlsZS8yMDI0LzA3LzA1LzIwMjQwNjA0XzE3MDkwNC5qcGc.jpg">
     <p>Гранитная стела с бюстом маршала и пушками ЗИС-3. Этот памятник почитает одного из самых известных военачальников Великой Отечественной.</p>
@@ -190,21 +244,29 @@ showTab("route1")
     <h2>Маршрут 3 — Историческое наследие</h2>
     <p>Красивейшие усадьбы и памятники архитектуры, сохранившиеся с XVIII–XIX веков.</p>
     
-    <h3>Усадьба Подушкино (замок Мейендорф)</h3>
-    <img src="https://s0.rbk.ru/v6_top_pics/resized/945xH/media/img/0/51/347337445914510.jpeg">
-    <p>Построена в 1874–1885 гг. в стиле французского шато с элементами готики. Изумительная архитектура и парк привлекают многих туристов.</p>
-    
-    <h3>Усадьба Зубалово</h3>
-    <img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_680b069f93124c3800c96e21_680b27cffb9e0069f8a56f16/scale_1200">
-    <p>В 1919–1932 гг. здесь находилась дача И.В. Сталина «Зубалово-4». Сегодня это место привлекает любителей истории XX века.</p>
-    
-    <h3>Усадьба Захарово</h3>
-    <img src="https://i.ytimg.com/vi/G1Aax3Zlh34/maxresdefault.jpg">
-    <p>Дом-музей детства А.С. Пушкина. Экспозиции рассказывают о жизни великого поэта в юные годы.</p>
-    
-    <h3>Усадьба Большие Вязёмы</h3>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Chateau_de_Viaziomy_-_2017_%281%29.jpg/1200px-Chateau_de_Viaziomy_-_2017_%281%29.jpg">
-    <p>Родовое гнездо князей Голицыных. Великолепное здание и старинный парк создают атмосферу прошлых столетий.</p>
+    <div class="place">
+        <h3>Усадьба Подушкино (замок Мейендорф)</h3>
+        <img src="https://s0.rbk.ru/v6_top_pics/resized/945xH/media/img/0/51/347337445914510.jpeg">
+        <p>Построена в 1874–1885 гг. в стиле французского шато с элементами готики. Изумительная архитектура и парк привлекают многих туристов.</p>
+    </div>
+
+    <div class="place">
+        <h3>Усадьба Зубалово</h3>
+        <img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_680b069f93124c3800c96e21_680b27cffb9e0069f8a56f16/scale_1200">
+        <p>В 1919–1932 гг. здесь находилась дача И.В. Сталина «Зубалово-4». Сегодня это место привлекает любителей истории XX века.</p>
+    </div>
+
+    <div class="place">
+        <h3>Усадьба Захарово</h3>
+        <img src="https://i.ytimg.com/vi/G1Aax3Zlh34/maxresdefault.jpg">
+        <p>Дом-музей детства А.С. Пушкина. Экспозиции рассказывают о жизни великого поэта в юные годы.</p>
+    </div>
+
+    <div class="place">
+        <h3>Усадьба Большие Вязёмы</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Chateau_de_Viaziomy_-_2017_%281%29.jpg/1200px-Chateau_de_Viaziomy_-_2017_%281%29.jpg">
+        <p>Родовое гнездо князей Голицыных. Великолепное здание и старинный парк создают атмосферу прошлых столетий.</p>
+    </div>
     </div>
     
     <!-- Маршрут 4 -->
@@ -212,21 +274,29 @@ showTab("route1")
     <h2>Маршрут 4 — Религиозные и культурные объекты</h2>
     <p>Места духовности, культуры и местной истории — для тех, кто любит познавательные прогулки.</p>
     
-    <h3>Саввино-Сторожевский монастырь</h3>
-    <img src="https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/1951140/NIOjo3JTSYiJQMXhazJMQ.jpg">
-    <p>Один из древнейших монастырей Московской области (XIV век). Внутри можно увидеть старинные фрески и уникальные реликвии.</p>
-    
-    <h3>Успенский собор на Городке</h3>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Zvenigorod_ChurchDormition_in_Gorodok2.JPG/1200px-Zvenigorod_ChurchDormition_in_Gorodok2.JPG">
-    <p>Шедевр древнерусской архитектуры с великолепными куполами и фресками. Является важной частью истории Звенигородского края.</p>
-    
-    <h3>Одинцовский историко-краеведческий музей</h3>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Odintsovo_Local_Museum_%28Old_Brickfield_Ofice%29.jpg/1280px-Odintsovo_Local_Museum_%28Old_Brickfield_Ofice%29.jpg">
-    <p>Экспозиции, посвящённые истории региона, археологии и быту жителей разных эпох. Отличное место для семейного посещения.</p>
-    
-    <h3>Культурный центр имени Любови Орловой</h3>
-    <img src="https://xn--80aaefyvhhbw4ne.xn--p1ai/static/7fb322968c79a9dda0d0103a16d6ff92f84031ea.jpeg">
-    <p>Посвящён выдающейся актрисе Любови Орловой. Здесь проходят выставки, концерты и культурные мероприятия.</p>
+    <div class="place">
+        <h3>Саввино-Сторожевский монастырь</h3>
+        <img src="https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/1951140/NIOjo3JTSYiJQMXhazJMQ.jpg">
+        <p>Один из древнейших монастырей Московской области (XIV век). Внутри можно увидеть старинные фрески и уникальные реликвии.</p>
+    </div>
+
+    <div class="place">
+        <h3>Успенский собор на Городке</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Zvenigorod_ChurchDormition_in_Gorodok2.JPG/1200px-Zvenigorod_ChurchDormition_in_Gorodok2.JPG">
+        <p>Шедевр древнерусской архитектуры с великолепными куполами и фресками. Является важной частью истории Звенигородского края.</p>
+    </div>
+
+    <div class="place">
+        <h3>Одинцовский историко-краеведческий музей</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Odintsovo_Local_Museum_%28Old_Brickfield_Ofice%29.jpg/1280px-Odintsovo_Local_Museum_%28Old_Brickfield_Ofice%29.jpg">
+        <p>Экспозиции, посвящённые истории региона, археологии и быту жителей разных эпох. Отличное место для семейного посещения.</p>
+    </div>
+
+    <div class="place">
+        <h3>Культурный центр имени Любови Орловой</h3>
+        <img src="https://xn--80aaefyvhhbw4ne.xn--p1ai/static/7fb322968c79a9dda0d0103a16d6ff92f84031ea.jpeg">
+        <p>Посвящён выдающейся актрисе Любови Орловой. Здесь проходят выставки, концерты и культурные мероприятия.</p>
+    </div>
     </div>
 
 <!-- Гастрономия -->
